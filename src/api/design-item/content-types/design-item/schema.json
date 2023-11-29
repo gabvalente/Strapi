@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "design_items",
+  "info": {
+    "singularName": "design-item",
+    "pluralName": "design-items",
+    "displayName": "DesignItem"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "coverImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "order": {
+      "type": "integer"
+    }
+  }
+}
