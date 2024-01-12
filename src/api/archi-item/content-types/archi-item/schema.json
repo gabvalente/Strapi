@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "design_items",
+  "collectionName": "archi_items",
   "info": {
-    "singularName": "design-item",
-    "pluralName": "design-items",
-    "displayName": "DesignItem",
+    "singularName": "archi-item",
+    "pluralName": "archi-items",
+    "displayName": "ArchiItem",
     "description": ""
   },
   "options": {
