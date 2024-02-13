@@ -71,6 +71,14 @@
           "localized": true
         }
       }
+    },
+    "year": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }
