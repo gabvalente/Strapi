@@ -789,6 +789,39 @@ export interface ApiArchiItemArchiItem extends Schema.CollectionType {
   };
 }
 
+export interface ApiCourseCourse extends Schema.CollectionType {
+  collectionName: 'courses';
+  info: {
+    singularName: 'course';
+    pluralName: 'courses';
+    displayName: 'Course';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    CourseDescription1: Attribute.RichText;
+    CourseDescription2: Attribute.RichText;
+    CourseTable: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::course.course',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::course.course',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiDesignItemDesignItem extends Schema.CollectionType {
   collectionName: 'design_items';
   info: {
@@ -884,6 +917,7 @@ declare module '@strapi/types' {
       'plugin::i18n.locale': PluginI18NLocale;
       'api::about.about': ApiAboutAbout;
       'api::archi-item.archi-item': ApiArchiItemArchiItem;
+      'api::course.course': ApiCourseCourse;
       'api::design-item.design-item': ApiDesignItemDesignItem;
     }
   }
